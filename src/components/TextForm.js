@@ -17,11 +17,8 @@ export default function TextForm(props) {
     }
 
     const handleCopy = () => {
-        var txt = document.getElementById("exampleFormControlTextarea1")
-        txt.select();
-        navigator.clipboard.writeText(txt.value)
+        navigator.clipboard.writeText(text)
         props.showAlert("Text Copied to Clipboard", "success")
-        window.getSelection().removeAllRanges();
     }
     
     const handleCapitalizedCase = () => {
@@ -61,8 +58,8 @@ export default function TextForm(props) {
     }
 
     function countWords(text){
-        let wc = text.split(" ").length;
-        text.split(" ").forEach((word) => {
+        let wc = text.split(/\s+/).length;
+        text.split(/\s+/).forEach((word) => {
             if(!word.length){
                 wc -= 1;  
             }
