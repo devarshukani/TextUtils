@@ -105,7 +105,7 @@ export default function TextForm(props) {
             <div className="container my-4">
                 <h2>Text Summary</h2>
                 <p>{countWords(text)} Words & {text.length} Characters</p>
-                <p>{0.008 * text.split(" ").length } Minutes will be taken to read text</p>
+                <p>{countWords(text) * 0.008 } Minutes will be taken to read text</p>
 
                 <h2>Text Preview</h2>
                 <p>{text}</p>

@@ -1,35 +1,7 @@
-// import React, {useState} from 'react'
-
 
 
 export default function About(props) {
 
-    // const [btnText,setBtnText] = useState("Enable Dark Mode") 
-
-    // const [myStyle, setMyStyle] = useState({
-    //     color:'black',
-    //     backgroundColor:'white'
-    // })
-
-    // const changeTheme = () => {
-    //     if(myStyle.color === 'black'){
-    //         setMyStyle({
-    //             color:'white',
-    //             backgroundColor:'black'
-                
-    //         })
-    //         setBtnText("Disable Dark Mode");
-    //     }
-    //     else{
-    //         setMyStyle({
-    //             color:'black',
-    //             backgroundColor:'white'
-    //         })
-    //         setBtnText("Enable Dark Mode");
-    //     }
-
-        
-    // }
 
   return (
     <div className="container">
