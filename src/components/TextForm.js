@@ -90,16 +90,16 @@ export default function TextForm(props) {
 
                 <h5>Case Conversion</h5>
 
-                <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>Upper Case</button>
-                <button className="btn btn-primary mx-2 my-2" onClick={handleLoClick}>Lower Case</button>
-                <button className="btn btn-primary mx-2 my-2" onClick={handleCamelClick}>Camel Case</button>
-                <button className="btn btn-primary mx-2 my-2" onClick={handleCapitalizedCase}>Capitalized Case</button>
-                <button className="btn btn-primary mx-2 my-2" onClick={handleAlternatingCase}>Alternating Case</button>
+                <button className="btn btn-primary mx-2 my-2" disabled={countWords(text) === 0} onClick={handleUpClick}>Upper Case</button>
+                <button className="btn btn-primary mx-2 my-2" disabled={countWords(text) === 0} onClick={handleLoClick}>Lower Case</button>
+                <button className="btn btn-primary mx-2 my-2" disabled={countWords(text) === 0} onClick={handleCamelClick}>Camel Case</button>
+                <button className="btn btn-primary mx-2 my-2" disabled={countWords(text) === 0} onClick={handleCapitalizedCase}>Capitalized Case</button>
+                <button className="btn btn-primary mx-2 my-2" disabled={countWords(text) === 0} onClick={handleAlternatingCase}>Alternating Case</button>
                 <br /> <br />
                 <h5>Miscellaneous</h5>
-                <button className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
-                <button className="btn btn-primary mx-2 my-2" onClick={handleCopy }>Copy Text</button>
-                <button className="btn btn-primary mx-2 my-2" onClick={handleClearText}>Clear Text</button>
+                <button className="btn btn-primary mx-2 my-2" disabled={text.length === 0} onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+                <button className="btn btn-primary mx-2 my-2" disabled={text.length === 0} onClick={handleCopy }>Copy Text</button>
+                <button className="btn btn-primary mx-2 my-2" disabled={text.length === 0} onClick={handleClearText}>Clear Text</button>
 
             </div>
             <div className="container my-4">
