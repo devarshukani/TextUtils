@@ -21,7 +21,7 @@ export default function TextForm(props) {
         txt.select();
         navigator.clipboard.writeText(txt.value)
         props.showAlert("Text Copied to Clipboard", "success")
-        
+        window.getSelection().removeAllRanges();
     }
     
     const handleCapitalizedCase = () => {
@@ -108,7 +108,7 @@ export default function TextForm(props) {
                 <p>{countWords(text) * 0.008 } Minutes will be taken to read text</p>
 
                 <h2>Text Preview</h2>
-                <p>{text}</p>
+                <p>{countWords(text) === 0? "Nothing to Preview !!" : text}</p>
 
             </div>
         </>
